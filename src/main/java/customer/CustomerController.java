@@ -61,12 +61,11 @@ public class CustomerController {
         }
     }
     
-    private Database cloudant  {return cloudant;
+    private Database cloudant()  {
+    	return cloudant;
     }
+    
 
-    /**
-     * @return customer by username
-     */
     @RequestMapping(value = "/customer/search", method = RequestMethod.GET)
     @ResponseBody ResponseEntity<?> searchCustomers(@RequestHeader Map<String, String> headers, @RequestParam(required=true) String username) {
         try {
